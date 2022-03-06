@@ -1,0 +1,88 @@
+body{
+    background-image: url("greg-rosenke-6QnEf_b47eA-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#container {
+    text-align: center;
+    font-size: xx-large;
+}
+
+#operate button{
+    height: 40px;
+    width: 39px;
+}
+
+#wrapper{
+    text-align: start;
+    width: 230px;
+    display: inline-block;
+
+}
+
+#display {
+    height: 50px;
+    width: 174px;
+    font-size: 30px;
+    text-align: right;
+}
+
+#equal{
+
+    position: absolute;
+    height: 175px !important;
+    top: 5px;
+    right: 50px;
+    background-color: chartreuse;
+}
+
+#line1{
+    position: relative;
+}
+
+
+#numbers button{
+    height: 40px;
+    width: 39px;
+}
+
+#minus{
+    background-color: aqua;
+}
+#plus{
+    background-color: darkorange;
+}
+
+#divide{
+    background-color: gold;
+}
+#multiply{
+    background-color: lightblue;
+}
+
+#C{
+    background-color: red;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
