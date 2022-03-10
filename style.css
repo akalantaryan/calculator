@@ -10,45 +10,41 @@ body{
     font-size: xx-large;
 }
 
-
-#operate button{
-    height: 40px;
-    width: 39px;
-}
-
 #wrapper{
-    text-align: start;
-    width: 230px;
+    text-align: center;
+    width: 350px;
     display: inline-block;
-
 }
 
 #display {
-    height: 50px;
-    width: 174px;
-    font-size: 30px;
+    height: 70px;
+    width: 340px;
+    font-size: 70px;
     text-align: right;
 }
 
-#equal{
-
-    position: absolute;
-    height: 175px !important;
-    top: 5px;
-    right: 50px;
-    background-color: chartreuse;
+#operate button{
+    height: 60px;
+    width: 81px;
+    font-size: xx-large;
+    margin-top: 7px;
 }
-
-#line1{
-    position: relative;
-}
-
 
 #numbers button{
-    height: 40px;
-    width: 39px;
+    height: 60px;
+    width: 111px;
+    font-size: xx-large;
+    margin-top: 7px;
 }
 
+
+#line4 button{
+    width: 171px;
+}
+
+#equal{
+    background-color: chartreuse;
+}
 #minus{
     background-color: aqua;
 }
@@ -61,6 +57,12 @@ body{
 }
 #multiply{
     background-color: lightblue;
+}
+#root{
+    background-color: burlywood;
+}
+#pow{
+    background-color: darkcyan;
 }
 
 #C{

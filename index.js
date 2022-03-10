@@ -13,28 +13,27 @@ let numberListener = function (event){
         return;
     }
     isNumberClicked = true;
-   if(event.target.innerText=== "="){
-       const res = operation(+nums1, +nums2,action)
-       changDisplay(res)
-   }
-   else if(event.target.innerText === "C"){
-       reset();
-   }
-   else {
-       changDisplay(event.target.innerText,true);
-   }
+    changDisplay(event.target.innerText,true);
 
-   if (isOperateClicked === true){
+    if (isOperateClicked){
        nums2 +=event.target.innerText;
-
-   }
-   else {
+    }
+    else {
        nums1 += event.target.innerText;
-   }
+    }
 }
 
 let operateListener = function (event){
     if(!event.target.type){
+        return;
+    }
+    if(event.target.innerText=== "="){
+        const res = operation(+nums1, +nums2,action)
+        changDisplay(res)
+        return;
+    }
+    else if(event.target.innerText === "C"){
+        reset();
         return;
     }
     changDisplay(event.target.innerText,true)
@@ -45,12 +44,20 @@ let operateListener = function (event){
         nums1 = res;
         nums2 = "";
     }
+
     action=event.target.innerText;
 
 }
 
 let reset = function (){
     changDisplay("0");
+
+     nums1 = "";
+     nums2 = "";
+     isOperateClicked=false;
+     isNumberClicked = false;
+     action = undefined;
+
 }
 let changDisplay = function (value,add){
     if(nums1 === "" || !add){
@@ -59,11 +66,8 @@ let changDisplay = function (value,add){
     else {
         display.value += value;
     }
+
 }
-
-numbers.addEventListener("click",numberListener);
-operate.addEventListener("click", operateListener);
-
 let operation = function (a,b,symbol){
     let result;
     if(symbol==="+"){
@@ -78,5 +82,17 @@ let operation = function (a,b,symbol){
     if(symbol==="/"){
         result = a/b;
     }
+    if(symbol === "√"){
+        result=Math.sqrt(a);
+    }
+    if(symbol ==="X^Y"){
+        result=Math.pow(a,b);
+    }
     return result;
+
 }
+
+numbers.addEventListener("click",numberListener);
+operate.addEventListener("click", operateListener);
+
+
